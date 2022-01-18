@@ -1,0 +1,64 @@
+
+ //Comentario de una sola línea
+ /* Comentario
+ de varias
+ líneas*/
+
+
+//----- Tipos de Variables
+var num1 = 23
+let num2 = 100
+const num3 = 15
+
+let resultado = num2 + num3
+
+
+//Formas de declarar: 
+let num4 = 100 //Primer forma de declarar
+let num5;
+num5 = 13 //Segunda forma de declarar*/
+
+
+/*Reglas para declarar variables:
+*Utilizar CamelCase
+*Utilizar solo el guión bajo como signo
+*No utilizar espacios ni puntos
+*Números únicamente después de alguna letra/palabra*/
+
+
+// CREAR VARIABLES Y REUTILIZARLAS EN DIFERENTES OPERACIONES
+let numero1 = 23
+let numero2 = 60
+let resultadoSuma = numero1 + numero2
+let resultadoResta = numero2 - numero1
+let resultadoMulti = numero1 * numero2
+let resultadoDiv = numero2 / numero1
+
+//TIPOS DE DATOS
+//STRING = texto 12/()? abc
+let nombre = "Pedro" //string
+//INT = -1 0 1
+let edad = 45 // ENTERO
+//FLOAT o DOUBLE 
+let altura = 1.45 //DECIMAL
+//BOOLEAN TRUE or FALSE
+let status = true //Boolean
+
+
+//Declarar datos vacíos para ser reutilizados más adelante
+let edad = 0
+let usuario = ""
+
+
+//MENSAJES
+prompt ("Ingrese su nombre") //pide info al usuario
+alert("Bienvenidos / as") //Muestra un alerta al usuario/ mje
+prompt ("Ingrese su edad")
+console.log ("El usuario ingresó de forma correcta") //Muestra info por consola a nosotros/as NO al usuario
+
+
+//PEDIR INFO Y GUARDARLA EN UNA VARIABLE PARA SER UTILIZADA
+let nombreUsuario = prompt ("Ingrese su nombre")
+alert ("Bienvenido/a " + nombreUsuario)
+let edad = prompt("Ingrese su edad")
+alert ("Hola " + nombreUsuario + ",tu edad es " + edad)
