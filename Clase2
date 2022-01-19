@@ -1,0 +1,97 @@
+//parseInt (Pasar a entero)
+let num = prompt("Ingrese un número")
+alert(num + 10)
+num = parseInt(num)
+alert(num + 10)
+
+
+//parseFloat (Pasar a decimal)
+let num = prompt("Ingrese un número")
+alert(num + 10.2)
+num = parseFloat(num)
+alert(num + 10.2)
+
+
+//OPERADORES LÓGICOS SIMPLES < , > , == , <= , >= , !=
+
+// ---- IF SIMPLE 
+let numero = prompt("Ingrese un número") 
+if (numero < 40){ //SI
+    alert("Tu número es menor a 40")
+}
+
+// ----IF .. ELSE
+let numero = prompt("Ingrese un número") 
+if (numero < 40){ //SI
+    alert("Tu número es menor a 40")
+} else { //SINO
+    alert ("Tu número es mayor a 40")
+}
+
+//EJEMPLO: Crear un login por separado
+let nombre = prompt("Ingrese su usuario")
+
+if (nombre == ""){
+    alert("No ingresó nombre")
+}else {
+    alert("Ahora ingrese su contraseña")
+}
+
+
+let contra = prompt("Ingrese su contra")
+
+if (contra == ""){
+    alert("No ingresó contra")
+    
+}else{
+    alert("Bienvenido/a " + nombre)
+}
+
+
+// ---IF ANIDADOS 
+
+let numero = prompt("Ingrese un número") 
+if (numero < 40){ //SI
+    alert("Tu número es menor a 40")
+} else if (numero > 40){ // SINO ...SI
+    alert("Tu número es mayor a 40")
+}else{ // SINO
+    alert("Tu número es igual")
+}
+
+let numero = prompt("Ingrese un número") //Es un if que funcionaría pero debemos evitar No escribir código de más
+if (numero < 40){ //SI
+    alert("Tu número es menor a 40")
+    } else if (numero > 40){ // SINO ...SI
+    alert("Tu número es mayor a 40")
+        }else if (numero == 40){ //SINO .. SI
+    alert("Tu número es igual")
+}else { //SINO
+    alert("No ingresaste un número")
+} 
+
+// -----------Act - Boliche y no pueden pasar menores de 18 años (Si pueden los que tengan 18 años o más)
+
+//let edad = parseInt(prompt("ingrese su edad")) Parsea en una misma línea
+let edad = prompt("Ingrese su edad")
+edad = parseInt(edad)  //Parsea en líneas diferentes
+if (edad >= 18){
+    alert("Puede ingresar")
+}else{
+    alert("No puede ingresar")
+}
+
+
+//login && ||
+let nombre = prompt("Ingrese su usuario").toLowerCase() //pasa a minúscula
+let contra = prompt("Ingrese su contraseña")
+
+if ((nombre == "luis" ) && (contra == "a23")){
+    alert("Bienvenido Luis")
+}else {
+    alert("Usted no es Luis o su clave es inválida")
+}
+
+
+
+
