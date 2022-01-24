@@ -1,0 +1,152 @@
+//funciones simples
+
+function saludar (){
+    alert("Buen lunes")
+}
+
+saludar()
+
+function nombre(){
+    let usuario = prompt("Ingrese su nombre")
+    alert(usuario)
+}
+
+nombre()
+
+function operaciones (){
+    let num1 = 10
+    let num2 = 20
+    let suma = num1 + num2
+    alert(suma)
+}
+
+operaciones()
+
+//funciones con parámetros
+
+function suma(num1 , num2){
+
+    let resultado = num1 + num2
+    alert("Tu resultado es: " + resultado)
+}
+
+suma( 104 , 15 )
+suma( 10 , 55 )
+suma( 101 , 52 )
+suma( 10 , 54 )
+
+function datos (nombre , edad){
+    alert("Tu nombre es " + nombre + " tu edad es " + edad)
+}
+
+datos("carlos" , 20)
+datos("Emma" , 30)
+datos("Roberto" , 32)
+datos("Cintia" , 60)
+datos("Emi" , 84)
+
+
+
+function suma(num1 , num2){
+
+   return num1 + num2
+    
+}
+
+
+let resultado = suma(10 , 10)
+alert(resultado)
+
+
+
+
+//calculadora  + - / * usando funciones
+
+function sumar (num1 , num2){
+    return num1 + num2
+}
+function resta (num1 , num2){
+    return num1 - num2
+}
+function multi (num1 , num2){
+    return num1 * num2
+}
+function div (num1 , num2){
+    return num1 / num2
+}
+
+let accion = prompt("¿Qué acción quiere realizar?(agregar signo)")
+let a = parseInt(prompt("primer núm"))
+let b = parseInt(prompt("segundo num"))
+if (accion == "+" ) {
+    let resultado = sumar(a,b)
+    alert(resultado)
+}
+
+
+
+//Ejercicio: Sacar iva del producto
+
+const suma  = (a,b) => a + b;
+const resta = (a,b) => a - b;
+//Si una función es una sola línea con retorno y un parámetro puede evitar escribir los ()
+const iva   = x => x * 0.21;
+let precioProducto  = 500; 
+let precioDescuento = 50;  
+//Calculo el precioProducto + IVA - precioDescueto
+let nuevoPrecio = resta(suma(precioProducto, iva(precioProducto)), precioDescuento); 
+alert(nuevoPrecio);
+
+
+
+
+
+//Preguntar cuantos alumnos/as quiere cargar el profe y que ingrese las tres notas con las cuales se obtendrá el promedio
+
+let nota1 
+let nota2 
+let nota3 
+
+function datos(i){
+    nota1 = parseInt(prompt(`Ingrese la nota 1 del alumno n° ${i}`))
+    nota2 = parseInt(prompt(`Ingrese la nota 2 del alumno n° ${i}`))
+    nota3 = parseInt(prompt(`Ingrese la nota 3 del alumno n° ${i}`))
+    
+}
+
+function suma (a,b, c){
+    return a + b +c 
+}
+
+function resultado (i, promedio){
+    if(promedio >= 4){
+        console.log(`El alumno n° ${i} tiene el curso aprobado`);
+    }else{
+        console.log(`El alumno n° ${i} desaprobo el curso`);
+     }
+}
+
+
+let cantidadAlumnos = parseInt(prompt("Ingrese la cantidad de alumnos/as de su clase"))
+
+
+
+
+for(i = 1; i <= cantidadAlumnos; i++){
+    datos(i)
+    //nota1 = parseInt(prompt(`Ingrese la nota 1 del alumno n° ${i}`))
+    //nota2 = parseInt(prompt(`Ingrese la nota 2 del alumno n° ${i}`))
+    //nota3 = parseInt(prompt(`Ingrese la nota 3 del alumno n° ${i}`))
+    let total = suma(nota1,nota2,nota3)
+    let promedio = total/3
+    alert(`Las notas del alumno ${i} son ${nota1}, ${nota2} y ${nota3}`);
+    alert(`La suma de sus tres notas es: ${total}`);
+    alert(`El promedio del curso es ${promedio.toFixed(2)}`);
+    resultado(i,promedio)
+    /*if(promedio >= 4){
+        console.log(`El alumno n° ${i} tiene el curso aprobado`);
+    }else{
+        console.log(`El alumno n° ${i} desaprobo el curso`);
+     }*/
+    
+}
