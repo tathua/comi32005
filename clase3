@@ -1,0 +1,90 @@
+//While 
+let num = 0
+while (num <= 10){
+    alert(" tu número es "+num)
+}
+
+let num = 0
+
+while (num <= 10){
+    num = prompt("ingrese un número")
+    alert(" tu número es "+num)
+}
+
+//do..while
+
+let num=0
+do {
+    num = prompt("ingrese un número")
+    alert(" tu número es "+num)
+}while((num <= 10))
+
+//Incrementar / decrementar
+let num = 0
+while (num <= 10){
+    alert(" tu número es "+num)
+    //num = num / 10 //suma
+    //num /=100
+    num++ //incrementa en 1
+    //num-- //decrementa en 1
+    
+}
+
+//FOR con variable declarada por fuera
+let num1 =0
+for (num1; num1 <= 10 ;num1++ ){
+    alert(num1)
+
+}
+
+
+//For con variable declarada dentro
+
+for (let numero2=0 ; numero2<=10 ; numero2++){
+    alert(numero2)
+}
+
+
+//ACTIVIDAD: Tabla de multiplicar
+
+/*let tabla = parseInt(prompt("Ingrese un número"))
+
+for(let num = 1 ; num <=10 ; num ++){
+    let result = num * tabla
+    if (num == 8){
+        break
+    }
+    alert( tabla + "x" + num + "=" + result)
+}*/
+
+let tabla = parseInt(prompt("Ingrese un número"))
+
+for(let num = 1 ; num <=10 ; num ++){
+    let result = num * tabla
+    if (num == 4 || num ==8 || num==9 ){ //4, 8, 9
+        continue
+    }
+    alert( tabla + "x" + num + "=" + result)
+}
+
+
+//SWITCH
+
+let num= 13
+
+switch(num){ //si
+    case 2:
+        alert("Tu núm es 2")
+        break;
+    case 10:
+        alert("Tu núm es 10")
+        break;
+    case 20:
+        alert("Tu núm es 20")
+        break;
+    case 13:
+        alert("Acertaste")
+        break;
+    default: //sino
+        alert("Ingresaste una letra")
+}
