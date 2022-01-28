@@ -1,0 +1,324 @@
+//   ------------------OBJETOS---------------(Características)
+//Hacer esto: (datos relacionados entre sí, pero sueltos)
+/*
+let nombre = "Homero";
+
+let edad   = 39;
+let calle  = "Av. Siempreviva 742";
+
+
+//Es igual a esto:
+let persona1 = { nombre: "Homero", edad: 39, calle: "Av. Siempreviva 742" }
+
+//o esto:
+let persona2 = { 
+    nombre: "lisa", 
+    edad: 8, 
+    calle: "Av. Siempreviva 742" 
+}
+
+
+
+//mostrar
+alert(persona1.nombre)
+alert(persona2["nombre"])
+
+
+
+
+//asignar
+persona1.nombre = "Marge"
+alert(persona1.nombre)
+
+
+
+
+
+//asignar con info de usuario
+persona1.nombre = prompt("Ingrese un nombre")
+alert(persona1.nombre)
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+//   ------------------OBJETOS CONSTRUCTORES---------------
+/*
+function Persona(nombre, edad, calle) { // le da nombre a una fnc, parámetros y su estructura
+    this.nombre = nombre;
+    this.edad 	 = edad;
+    this.calle  = calle;
+}
+
+
+const persona1 = new Persona("Homero", 39, "Av. Siempreviva 742"); //Completa los datos de la función
+const persona2 = new Persona("Marge", 36, "Av. Siempreviva 742");
+alert(persona1.nombre) //se puede mostrar un dato puntual
+
+
+
+
+
+//new = Permite generar nuevos objetos / personas
+//this = Permite asociar el objeto con el dato
+
+
+//-----Ejercicio----
+//Generar un objeto utilizando 3 datos de nuestras máscotas (Características)
+
+function Mascota (nombre , raza , color) {
+    this.nombre = nombre
+    this.raza = raza
+    this.color = color
+}
+
+
+const mascota1 = new Mascota ("Firualais", "Beagle" , "tricolor")
+alert("nombre es: "+ mascota1.nombre + ", la raza es: " + mascota1.raza)
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FUNCIONES & MÉTODOS (Acciones)
+/*
+function Persona(nombre, edad, calle) {
+    this.nombre = nombre;
+    this.edad   = edad;
+    this.calle  = calle;
+    this.hablar = function(){ console.log("HOLA SOY "+ this.nombre + "tengo " + this.edad + "años")} //Acción
+}
+const persona1 = new Persona("Homero", 39, "Av. Siempreviva 742");
+const persona2 = new Persona("Marge", 36, "Av. Siempreviva 742");
+persona1.hablar();
+persona2.hablar();
+*/
+
+
+
+
+
+
+
+
+
+
+
+//IN - FOR..IN
+/*
+const persona1 = { nombre: "Homero", edad: 39, calle: "Av. Siempreviva 742"};
+const persona2 = { nombre: "Lisa", edad: 8, calle: "Av. Siempreviva 742"};
+
+//devuelve true porque la clave "nombre" existe en el objeto persona1
+console.log( "nombre" in persona1); //true
+
+//devuelve false porque la clave "origen" no existe en el objeto persona1
+console.log( "origen" in persona1); //false
+
+//recorremos todas las propiedades del objeto con el ciclo for...in (Muestra 1x1)
+for (const propiedad in persona1) {
+    console.log(persona1[propiedad]);
+    alert(persona1[propiedad]);
+}
+
+
+for (const propiedad in persona2) {
+    console.log(persona2[propiedad]);
+    alert(persona2[propiedad]);
+}
+*/
+
+
+
+
+//  -----------------------CLASES-----------------------
+/*
+
+class Persona{ //similar a una función
+    constructor(nombre, edad, calle) { //El constructor tiene parámetros
+        this.nombre = nombre;
+        this.edad   = edad;
+        this.calle  = calle;
+    }
+}
+const persona1 = new Persona("Homero", 39, "Av. Siempreviva 742");
+
+
+function Persona(nombre, edad, calle) {
+    this.nombre = nombre;
+    this.edad   = edad;
+    this.calle  = calle;
+    
+}
+*/
+/*
+//Clases y métodos
+class Persona{
+    constructor(nombre, edad, calle) {
+        this.nombre = nombre;
+        this.edad   = edad;
+        this.calle  = calle;
+    }
+    hablar1(){
+        console.log("HOLA SOY "+ this.nombre);
+    }
+    hablar2(){
+        console.log("HOLA SOY "+ this.nombre);
+    }
+    hablar3(){
+        console.log("HOLA SOY "+ this.nombre);
+    }
+}
+const persona1 = new Persona("Bart", 39, "Av. Siempreviva 742");
+persona1.hablar1(); //Consola
+persona1.hablar2(); //Consola
+persona1.hablar3(); //Consola
+*/
+
+
+//Preguntar cuantos alumnos/as quiere cargar el profe y que ingrese las tres notas con las cuales se obtendrá el promedio
+/*
+let nota1 
+let nota2 
+let nota3 
+
+function datos(i){
+    nota1 = parseInt(prompt(`Ingrese la nota 1 del alumno n° ${i}`))
+    nota2 = parseInt(prompt(`Ingrese la nota 2 del alumno n° ${i}`))
+    nota3 = parseInt(prompt(`Ingrese la nota 3 del alumno n° ${i}`))
+    
+}
+
+function suma (a,b, c){
+    return a + b +c 
+}
+
+function resultado (i, promedio){
+    if(promedio >= 4){
+        console.log(`El alumno n° ${i} tiene el curso aprobado`);
+    }else{
+        console.log(`El alumno n° ${i} desaprobo el curso`);
+     }
+}
+
+
+let cantidadAlumnos = parseInt(prompt("Ingrese la cantidad de alumnos/as de su clase"))
+
+
+
+
+for(i = 1; i <= cantidadAlumnos; i++){
+    datos(i)
+    //nota1 = parseInt(prompt(`Ingrese la nota 1 del alumno n° ${i}`))
+    //nota2 = parseInt(prompt(`Ingrese la nota 2 del alumno n° ${i}`))
+    //nota3 = parseInt(prompt(`Ingrese la nota 3 del alumno n° ${i}`))
+    let total = suma(nota1,nota2,nota3)
+    let promedio = total/3
+    alert(`Las notas del alumno ${i} son ${nota1}, ${nota2} y ${nota3}`);
+    alert(`La suma de sus tres notas es: ${total}`);
+    alert(`El promedio del curso es ${promedio.toFixed(2)}`);
+    resultado(i,promedio)
+    /*if(promedio >= 4){
+        console.log(`El alumno n° ${i} tiene el curso aprobado`);
+    }else{
+        console.log(`El alumno n° ${i} desaprobo el curso`);
+     }
+    
+}
+*/
+/*
+class Alumno {
+    constructor(nota1,nota2,nota3){
+        this.nota1 = nota1
+        this.nota2 = nota2
+        this.nota3 = nota3
+        this.aprobado = false
+    }
+    promedio (){
+       return (this.nota1 + this.nota2 + this.nota3)/3
+       
+
+    }
+     aprobado1 (){
+        let prom = this.promedio()
+        if(prom >= 4){
+            this.aprobado = true;
+            alert("Aprobaste")
+        }else{
+            this.aprobado = false;
+            alert("Desaprobaste")
+         }
+    }
+    
+
+}
+
+const alumno1 = new Alumno (7,8,7)
+alumno1.aprobado1()
+alert(alumno1.promedio())
+*/
+
+// --------------------------------------------------------
+let nota1 
+let nota2 
+let nota3 
+
+function datos(i){
+    nota1 = parseInt(prompt(`Ingrese la nota 1 del alumno n° ${i}`))
+    nota2 = parseInt(prompt(`Ingrese la nota 2 del alumno n° ${i}`))
+    nota3 = parseInt(prompt(`Ingrese la nota 3 del alumno n° ${i}`))
+    
+}
+
+class Alumno {
+    constructor(nota1,nota2,nota3){
+        this.nota1 = nota1
+        this.nota2 = nota2
+        this.nota3 = nota3
+        this.aprobado = false
+    }
+    promedio (){
+       return (this.nota1 + this.nota2 + this.nota3)/3
+       
+
+    }
+     aprobado1 (){
+        let prom = this.promedio()
+        if(prom >= 4){
+            this.aprobado = true;
+            alert("Aprobaste")
+        }else{
+            this.aprobado = false;
+            alert("Desaprobaste")
+         }
+    }
+    
+
+}
+datos(1)
+const alumno1 = new Alumno (nota1,nota2,nota3)
+alumno1.aprobado1()
+alert(alumno1.promedio())
+
